@@ -94,7 +94,7 @@ body{
 		top: 0;
 		left: 0;
 		bottom: 0;
-		background-color: rgba(20,20,20,1);
+		background-color: rgba(20,20,20,.8);
 	}
 
 	.right-side-panel {
