@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>查询员工信息 |原木衣橱</title>
+    <title>查询订单信息 |原木衣橱</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <!-- jquery & ajax -->
     <script src="jQuery/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="scripts/staffInfo.js"></script>
+    <script type="text/javascript" src="scripts/orderInfo.js"></script>
 
   </head>
 
@@ -51,10 +51,10 @@
                 </ul>
               </li>
               <!-- 订单有关 -->
-              <li class="dropdown">
+              <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">订单管理<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="manager_orderInfo.html">查询订单</a></li>
+                  <li class="active"><a href="#">查看订单</a></li>
                   <li><a href="manager_addOrder.html">增加订单</a></li>
                 </ul>
               </li>
@@ -67,10 +67,10 @@
                   <li><a href="#">查看调货报表</a></li>
                 </ul>
               </li>
-              <li class="dropdown active">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">员工管理<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class="active"><a href="manager_staffInfo.html">查看/修改员工信息</a></li>
+                  <li><a href="manager_staffInfo.html">查看/修改员工信息</a></li>
                   <li><a href="manager_addStaff.html">添加员工</a></li>
                 </ul>
               </li>
@@ -94,7 +94,7 @@
     </div>
     <!-- 标题 -->
     <div class="container">
-      <h2 class="sub-header">员工信息查询</h2>
+      <h2 class="sub-header">订单查询</h2>
     </div>
     <!-- 搜索框 -->
     <div class="container text-center main-search">
@@ -137,44 +137,71 @@
         <table class="table table-striped">
           <thead>
             <tr id="table-title">
-              <th>员工编号</th>
-              <th>姓名</th>
-              <th>性别</th>
-              <th>联系方式</th>
-              <th>移除员工</th>
+              <th>订单编号</th>
+              <th>订单总价</th>
+              <th>订单时间</th>
+              <th>订单明细</th>
             </tr>
           </thead>
           <tbody id="table-body">
             <tr>
-              <td id="staffId">001</td>
-              <td>刘旭东</td>
-              <td>男</td>
-              <td>13777777777</td>
-              <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_staff">移除</button></td>
+              <td id="orderId">289374982747932</td>
+              <td>666.66元</td>
+              <td>2015-07-16 09:30</td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#detail_modal">查看明细</button>
+              </td>
             </tr>
             <tr>
-              <th>00000</th>
-              <th>aa11</th>
-              <th>dd</th>
-              <th>x</th>
-              <th><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_staff">移除</button></th>
+              <td id="orderId">049873627383940</td>
+              <td>666.66元</td>
+              <td>2015-07-16 09:30</td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#detail_modal">查看明细</button>
+              </td>
+            </tr>
+            <tr>
+              <td id="orderId">838267284947322</td>
+              <td>666.66元</td>
+              <td>2015-07-16 09:30</td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#detail_modal">查看明细</button>
+              </td>
             </tr>
           </tbody>
         </table>
         <!-- Modal -->
-        <div class="modal fade" id="delete_staff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="detail_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">移除员工</h4>
+                <!-- 订单编号 -->
+                <h4 class="modal-title" id="myModalLabel">订单编号：</h4>
               </div>
-              <div class="modal-body" id="delete_modal">
-                你确定要移除员工刘旭东吗？
+              <div class="modal-body">
+                <!-- 订单明细表格 -->
+                <table class="table table-striped">
+                  <thead>
+                    <tr id="modal">
+                      <th>产品编号</th>
+                      <th>产品数量</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="modal">
+                      <th>001</th>
+                      <th>4</th>
+                    </tr>
+                    <tr id="modal">
+                      <th>001</th>
+                      <th>4</th>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary">确定</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
               </div>
             </div>
           </div>
