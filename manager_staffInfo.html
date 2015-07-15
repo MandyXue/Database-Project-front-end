@@ -107,8 +107,6 @@
               <option value ="unknown">请选择</option>
               <option value ="staffId">员工编号</option>
               <option value ="staffName">姓名</option>
-<!--               <option value ="staffJob">职位</option>
-              <option value ="shopId">所在门店</option> -->
             </select>
           </div>
           <div class="col-md-8 col-sm-8 search-key-padding">
@@ -123,11 +121,16 @@
       </form>
     </div>
     <div class="container text-center main-sort">
-      <div class="btn-group" role="group" aria-label="selectStaffBtnGroup">
-        <button type="button" class="btn btn-info">按编号</button>
-        <button type="button" class="btn btn-primary">按姓名</button>
-        <!-- <button type="button" class="btn btn-info">按职位</button>
-        <button type="button" class="btn btn-primary">按所在门店</button> -->
+      <div class="row">
+        <div class="col-md-6 text-right">
+          <div class="btn-group" role="group" aria-label="selectStaffBtnGroup">
+            <button type="button" class="btn btn-info">按编号</button>
+            <button type="button" class="btn btn-primary">按姓名</button>
+          </div>
+        </div>
+        <div class="col-md-6 text-left">
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加员工</button>
+        </div>
       </div>
     </div>
     <!-- 信息表格 -->
@@ -135,7 +138,7 @@
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
-            <tr>
+            <tr id="table-title">
               <th>员工编号</th>
               <th>姓名</th>
               <th>性别</th>
@@ -143,7 +146,7 @@
               <th>移除员工</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="table-body">
             <tr>
               <td id="staffId">001</td>
               <td>刘旭东</td>
@@ -173,19 +176,91 @@
                 </div><!--modal-->
               </td>
             </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa11</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa10</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa9</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa8</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa7</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa6</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa5</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa4</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa3</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa2</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
+            <tr>
+              <th>00000</th>
+              <th>aa1</th>
+              <th>dd</th>
+              <th>x</th>
+              <th>ddddd</th>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
-    
     <!-- 分页导航 -->
     <nav class="text-center">
       <ul class="pagination">
-        <li>
-          <a href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
+        <!-- <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="active"><a href="#">1</a></li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
@@ -195,7 +270,7 @@
           <a href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <footer class="footer">
