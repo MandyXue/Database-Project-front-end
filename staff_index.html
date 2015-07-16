@@ -41,7 +41,7 @@
             <a class="navbar-brand" href="#">
               <img class="logo-responsive" alt="Brand" src="images/logo.png">
             </a>
-            <a class="navbar-brand" href="#">原木衣橱连锁</a>
+            <a class="navbar-brand" href="staff_index.html">原木衣橱连锁</a>
           </div><!-- navbar header -->
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,15 +50,15 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服装<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">查询服装信息</a></li>
+                  <li><a href="staff_clothesinfo.html">查询服装信息</a></li>
                 </ul>
               </li>
               <!-- 订单有关 -->
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">订单 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">查询订单</a></li>
-                  <li><a href="#">增加订单</a></li>
+                  <li><a href="staff_orderinfo.html">查询订单</a></li>
+                  <li><a href="staff_addorder.html">增加订单</a></li>
                 </ul>
               </li>
             </ul>
@@ -70,7 +70,7 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="text-center"><a href="#">修改个人信息</a></li>
+                  <li class="text-center"><a href="staff_setting.html">修改个人信息</a></li>
                   <li class="text-center"><a href="#">退出</a></li>
                 </ul>
               </li>
@@ -92,8 +92,6 @@
                     <th>订单编号</th>
                     <th>订单时间</th>
                     <th>总价</th>
-                    <th>修改</th>
-                    <th>删除</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -101,62 +99,26 @@
                     <td id="staffId">23980012398001</td>
                     <td>2015-07-14 21:58</td>
                     <td>666.66元</td>
-                    <td>
-                      <button type="button" class="btn btn-success btn-sm">
-                        修改
-                      </button>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_orderId">
-                        删除
-                      </button>
-                      <!-- Modal -->
-                      <div class="modal fade" id="delete_orderId" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title" id="myModalLabel">删除订单</h4>
-                            </div>
-                            <div class="modal-body">
-                              你确定要删除订单2398001吗？
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" onclick="delete(this)">确定</button>
-                              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div><!--modal-->
-                    </td>
                   </tr>
                   <tr>
                     <th>订单编号</th>
                     <th>订单时间</th>
                     <th>总价</th>
-                    <th>修改</th>
-                    <th>删除</th>
                   </tr>
                   <tr>
                     <th>订单编号</th>
                     <th>订单时间</th>
                     <th>总价</th>
-                    <th>修改</th>
-                    <th>删除</th>
                   </tr>
                   <tr>
                     <th>订单编号</th>
                     <th>订单时间</th>
                     <th>总价</th>
-                    <th>修改</th>
-                    <th>删除</th>
                   </tr>
                   <tr>
                     <th>订单编号</th>
                     <th>订单时间</th>
                     <th>总价</th>
-                    <th>修改</th>
-                    <th>删除</th>
                   </tr>
                 </tbody>
               </table>
@@ -167,31 +129,50 @@
           <br/><h2>最热卖五件商品</h2><br/><br/>
           <div class="row" id="clothes">
             <!-- 第一个需要offset 后面格式相同 -->
+            <!-- TODO: 查看信息 -->
             <div class="col-md-2 col-sm-2 col-xs-4 col-sm-offset-1">
               <img class="img-responsive" src="images/logo.png">
               <br/><h4>衣服1</h4>
-              <button type="button" class="btn btn-info">查看信息</button>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail_modal">查看信息</button>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-4">
               <img class="img-responsive" src="images/logo.png">
-              <br/><h4>衣服1</h4>
-              <button type="button" class="btn btn-info">查看信息</button>
+              <br/><h4>衣服2</h4>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail_modal">查看信息</button>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-4">
               <img class="img-responsive" src="images/logo.png">
-              <br/><h4>衣服1</h4>
-              <button type="button" class="btn btn-info">查看信息</button>
+              <br/><h4>衣服3</h4>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail_modal">查看信息</button>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-4">
               <img class="img-responsive" src="images/logo.png">
-              <br/><h4>衣服1</h4>
-              <button type="button" class="btn btn-info">查看信息</button>
+              <br/><h4>衣服4</h4>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail_modal">查看信息</button>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-4">
               <img class="img-responsive" src="images/logo.png">
-              <br/><h4>衣服1</h4>
-              <button type="button" class="btn btn-info">查看信息</button>
+              <br/><h4>衣服5</h4>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail_modal">查看信息</button>
             </div>
+            <!--modal-->
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="detail_modal">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">衣服详情</h4>
+                  </div>
+                  <div class="modal-body">
+                      <img class="text-center img-responsive" src="images/logo.jpg">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--modal-->
           </div>
         </div>
       </div>
