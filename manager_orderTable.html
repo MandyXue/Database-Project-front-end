@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>查看服装信息|原木衣橱</title>
+    <title>首页|原木衣橱连锁管理</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,7 @@
   </head>
 
   <body>
+
     <!-- navbar container -->
     <div class="container">
       <nav class="navbar navbar-default navbar-fixed-top">
@@ -42,10 +43,10 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- 服装有关 -->
             <ul class="nav navbar-nav navbar-left">
-              <li class="dropdown active">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服装管理<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class="active"><a href="manager_clothesinfo.html">查询服装信息</a></li>
+                  <li><a href="manager_clothesinfo.html">查询服装信息</a></li>
                   <li><a href="manager_stockinfo.html">查询服装库存</a></li>
                 </ul>
               </li>
@@ -57,10 +58,10 @@
                   <li><a href="manager_addOrder.html">增加订单</a></li>
                 </ul>
               </li>
-              <li class="dropdown">
+              <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">报表管理<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="manager_ordertable.html">查看订单报表</a></li>
+                  <li class="active"><a href="manager_ordertable.html">查看订单报表</a></li>
                   <li><a href="manager_inbasetable.html">查看入库报表</a></li>
                   <li><a href="manager_outbasetable.html">查看出库报表</a></li>
                   <li><a href="manager_applytable.html">查看调货报表</a></li>
@@ -93,34 +94,98 @@
     </div>
     <!-- 标题 -->
     <div class="container">
-      <h2 class="sub-header">服装信息查询</h2>
+      <h2 class="sub-header">订单报表信息查询</h2>
     </div>
     <!-- 搜索框 -->
     <div class="container text-center main-search">
       <form role="search">
         <div class="row">
-          <div class="col-md-3 col-sm-3">
+          <label class="col-md-3 col-sm-3 text-left">选取日期:</label>
+          <div class="col-md-2 col-sm-2">
             <select class="form-control" name="searchCondition">
-              <option value ="unknown">请选择</option>
-              <option value ="staffId">服装编号</option>
-              <option value ="staffName">服装名称</option>
+              <option value ="2000">2000</option>
+              <option value ="2001">2001</option>
+              <option value ="2002">2002</option>
+              <option value ="2003">2003</option>
+              <option value ="2004">2004</option>
+              <option value ="2005">2005</option>
+              <option value ="2006">2006</option>
+              <option value ="2007">2007</option>
+              <option value ="2008">2008</option>
+              <option value ="2009">2009</option>
+              <option value ="2010">2010</option>
+              <option value ="2011">2011</option>
+              <option value ="2012">2012</option>
+              <option value ="2013">2013</option>
+              <option value ="2014">2014</option>
+              <option value ="2015">2015</option>
             </select>
           </div>
-          <div class="col-md-8 col-sm-8 search-key-padding">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="关键字" name="searchKey">
-            </div>
+          <label class="col-md-1 col-sm-1 text-left">年</label>
+          <div class="col-md-2 col-sm-2">
+            <select class="form-control" name="searchCondition">
+              <option value ="jan">1</option>
+              <option value ="feb">2</option>
+              <option value ="mar">3</option>
+              <option value ="apr">4</option>
+              <option value ="may">5</option>
+              <option value ="jun">6</option>
+              <option value ="jul">7</option>
+              <option value ="aug">8</option>
+              <option value ="sep">9</option>
+              <option value ="oct">10</option>
+              <option value ="nov">11</option>
+              <option value ="dec">12</option>
+            </select>
           </div>
-          <div class="col-md-1 col-sm-1 search-padding">
-            <button type="submit" class="btn btn-default">搜索</button>
+          <label class="col-md-1 col-sm-1 text-left">月</label>
+          <div class="col-md-2 col-sm-2">
+            <select class="form-control" name="searchCondition">
+              <option value ="day1">1</option>
+              <option value ="day2">2</option>
+              <option value ="day3">3</option>
+              <option value ="day4">4</option>
+              <option value ="day5">5</option>
+              <option value ="day6">6</option>
+              <option value ="day7">7</option>
+              <option value ="day8">8</option>
+              <option value ="day9">9</option>
+              <option value ="day10">10</option>
+              <option value ="day11">11</option>
+              <option value ="day12">12</option>
+              <option value ="day13">13</option>
+              <option value ="day14">14</option>
+              <option value ="day15">15</option>
+              <option value ="day16">16</option>
+              <option value ="day17">17</option>
+              <option value ="day18">18</option>
+              <option value ="day19">19</option>
+              <option value ="day20">20</option>
+              <option value ="day21">21</option>
+              <option value ="day22">22</option>
+              <option value ="day23">23</option>
+              <option value ="day24">24</option>
+              <option value ="day25">25</option>
+              <option value ="day26">26</option>
+              <option value ="day27">27</option>
+              <option value ="day28">28</option>
+              <option value ="day29">29</option>
+              <option value ="day30">30</option>
+              <option value ="day31">31</option>
+            </select>
           </div>
+          <label class="col-md-1 col-sm-1 text-left">日</label>
+        </div>
+        <br>
+        <div class="row">
+          <button class="col-md-2 col-sm-2 col-md-offset-10 btn btn-default">搜索</button>
         </div>
       </form>
     </div>
     <div class="container text-center main-sort">
       <div class="btn-group" role="group" aria-label="selectStaffBtnGroup">
-        <button type="button" class="btn btn-info">按编号</button>
-        <button type="button" class="btn btn-primary">按名称</button>
+        <button type="button" class="btn btn-info">按订单号</button>
+        <button type="button" class="btn btn-primary">按时间</button>
       </div>
     </div>
     <!-- 信息表格 -->
@@ -129,58 +194,41 @@
         <table class="table table-striped">
           <thead>
             <tr id="table-title">
-              <th>服装编号</th>
-              <th>服装名称</th>
-              <th>尺寸</th>
-              <th>颜色</th>
-              <th>单价</th>
-              <th>上市日期</th>
-              <th>图片</th>
+              <th>订单号</th>
+              <th>订单总价</th>
+              <th>订单时间</th>
             </tr>
           </thead>
           <tbody id="table-body">
             <tr>
-              <td id="itemId">001</td>
-              <td>T恤</td>
-              <td>XL</td>
-              <td>黄色</td>
-              <td>88</td>
-              <td>2015/4/24</td>
-              <td>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#picture_modal">查看图片</button>         
-              </td>
+              <td>2536svs</td>
+              <td>843</td>
+              <td>14:53:49</td>
+            </tr>
+            
+            <tr>
+              <td>2536svs</td>
+              <td>843</td>
+              <td>14:53:49</td>
             </tr>
             <tr>
-              <td id="itemId">001</td>
-              <td>T恤</td>
-              <td>XL</td>
-              <td>黄色</td>
-              <td>88</td>
-              <td>2015/4/24</td>
-              <td>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#picture_modal">查看图片</button>         
-              </td>
+              <td>2536svs</td>
+              <td>843</td>
+              <td>14:53:49</td>
             </tr>
+            <tr>
+              <td>2536svs</td>
+              <td>843</td>
+              <td>14:53:49</td>
+            </tr>
+            <tr>
+              <td>2536svs</td>
+              <td>843</td>
+              <td>14:53:49</td>
+            </tr>
+            
           </tbody>
         </table>
-        <!-- Modal -->
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="picture_modal">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">图片详情</h4>
-              </div>
-              <div class="modal-body">
-                  <img class="text-center img-responsive" src="images/logo.jpg">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal -->
       </div>
     </div>
     <!-- 分页导航 -->
