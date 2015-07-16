@@ -46,8 +46,8 @@ $(function(){
     })
 
     // 模态框设置
-    $('.btn-success').click(function(){
-        var orderId = $(this).parent().prev().prev().prev().html();
-        $('#myModalLabel').html('订单编号：'+orderId);
-    })
+    // $('.btn-success').click(function(){
+    //     var orderId = $(this).parent().prev().prev().prev().html();
+    //     $('#myModalLabel').html('订单编号：'+orderId);
+    // })
 });

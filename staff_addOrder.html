@@ -16,7 +16,8 @@
 
     <!-- jquery & ajax -->
     <script src="jQuery/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="scripts/addStaff.js"></script>
+    <script type="text/javascript" src="scripts/addOrder.js"></script>
+    
 
   </head>
 
@@ -88,25 +89,90 @@
             <div role="tabpanel" class="tab-pane fade in active" id="personal-info">
               <div class="thumbnail">
                 <div class="caption">
-                  <div class="container">
-                    <!-- TODO: 给订单添加货物 js css -->
-                    <legend class="name">刘旭东</legend>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <h3>个人信息</h3></br>
-                        <p>编号：007</p>
-                        <p>职位：普通员工</p>
-                        <p>所在门店：淮海路分店</p>
-                        <p>联系方式：12345678901</p>
-                        <p>邮箱：123@456.com</p>
-                      </div>
-                      <div class="col-md-6">
-                        <h3>所在分店信息</h3></br>
-                        <p>编号：001</p>
-                        <p>地址：淮海路666号</p>
-                        <p>门店电话：(021)68738726</p>
-                      </div>
+                  <!-- TODO: 给订单添加货物 js css -->
+                  <!-- name：clothes_id_1 和 clothes_amount_1 -->
+                  <legend class="name form-inline">
+                    <h4>添加一个新订单：</h4>
+                  </legend>
+                  <div class="form-inline text-center" id="inline-1">
+                    <div class="form-group">
+                      <label>服装编号：</label>
+                      <select class="form-control" name="clothes_id_1" id="clothes_id" required>
+                        <option>2893748927</option>
+                        <option>2389729333</option>
+                        <option>9282737382</option>
+                      </select>
                     </div>
+                    <div class="form-group" style="margin-left:10px;">
+                      <label>数量：</label>
+                      <input type="text" class="form-control" name="clothes_amount_1" placeholder="数量" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addClothes">添加</button>
+                    <button type="button" class="btn btn-danger" id="deleteClothes" style="display:none;">删除</button>
+                  </div>
+                  <div class="form-inline text-center" id="inline-2" style="display:none;">
+                    <div class="form-group">
+                      <label>服装编号：</label>
+                      <select class="form-control" name="clothes_id_2" id="clothes_id" required>
+                        <option>2893748927</option>
+                        <option>2389729333</option>
+                        <option>9282737382</option>
+                      </select>
+                    </div>
+                    <div class="form-group" style="margin-left:10px;">
+                      <label>数量：</label>
+                      <input type="text" class="form-control" name="clothes_amount_2" placeholder="数量" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addClothes-2">添加</button>
+                    <button type="button" class="btn btn-danger" id="deleteClothes-2" style="display:none;">删除</button>
+                  </div>
+                  <div class="form-inline text-center" id="inline-3" style="display:none;">
+                    <div class="form-group">
+                      <label>服装编号：</label>
+                      <select class="form-control" name="clothes_id_3" id="clothes_id" required>
+                        <option>2893748927</option>
+                        <option>2389729333</option>
+                        <option>9282737382</option>
+                      </select>
+                    </div>
+                    <div class="form-group" style="margin-left:10px;">
+                      <label>数量：</label>
+                      <input type="text" class="form-control" name="clothes_amount_3" placeholder="数量" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addClothes-3">添加</button>
+                    <button type="button" class="btn btn-danger" id="deleteClothes-3" style="display:none;">删除</button>
+                  </div>
+                  <div class="form-inline text-center" id="inline-4" style="display:none;">
+                    <div class="form-group">
+                      <label>服装编号：</label>
+                      <select class="form-control" name="clothes_id_4" id="clothes_id" required>
+                        <option>2893748927</option>
+                        <option>2389729333</option>
+                        <option>9282737382</option>
+                      </select>
+                    </div>
+                    <div class="form-group" style="margin-left:10px;">
+                      <label>数量：</label>
+                      <input type="text" class="form-control" name="clothes_amount_4" placeholder="数量" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addClothes-4">添加</button>
+                    <button type="button" class="btn btn-danger" id="deleteClothes-4" style="display:none;">删除</button>
+                  </div>
+                  <div class="form-inline text-center" id="inline-5" style="display:none;">
+                    <div class="form-group">
+                      <label>服装编号：</label>
+                      <select class="form-control" name="clothes_id_5" id="clothes_id" required>
+                        <option>2893748927</option>
+                        <option>2389729333</option>
+                        <option>9282737382</option>
+                      </select>
+                    </div>
+                    <div class="form-group" style="margin-left:10px;">
+                      <label>数量：</label>
+                      <input type="text" class="form-control" name="clothes_amount_5" placeholder="数量" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="addClothes-5">添加</button>
+                    <button type="button" class="btn btn-danger" id="deleteClothes-5" style="display:none;">删除</button>
                   </div>
                 </div>  
               </div>

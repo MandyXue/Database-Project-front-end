@@ -17,6 +17,16 @@
     <!-- jquery & ajax -->
     <script src="jQuery/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="scripts/orderInfo.js"></script>
+    <!-- 模态框js -->
+    <script type="text/javascript">
+        $(function(){
+            // 模态框设置
+            $('.btn-success').click(function(){
+                var orderId = $(this).parent().prev().prev().prev().html();
+                $('#myModalLabel').html('订单编号：'+orderId);
+            })
+        });
+    </script>
 
   </head>
 
@@ -167,17 +177,20 @@
                 <table class="table table-striped">
                   <thead>
                     <tr id="modal">
-                      <th>产品编号</th>
-                      <th>产品数量</th>
+                      <th>服装编号</th>
+                      <th>服装名称</th>
+                      <th>服装数量</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr id="modal">
                       <th>001</th>
+                      <th>长裙</th>
                       <th>4</th>
                     </tr>
                     <tr id="modal">
                       <th>001</th>
+                      <th>长裙</th>
                       <th>4</th>
                     </tr>
                   </tbody>
