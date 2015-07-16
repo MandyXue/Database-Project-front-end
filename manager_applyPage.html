@@ -1,3 +1,5 @@
+<!-- 调货页面 -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,17 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>首页|原木衣橱连锁管理</title>
+    <title>申请调货 |原木衣橱</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- settings css -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/staffInfo.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/addStaff.css">
 
     <!-- jquery & ajax -->
     <script src="jQuery/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="scripts/staffInfo.js"></script>
+    <script type="text/javascript" src="scripts/addStaff.js"></script>
+    <script type="text/javascript">
+      // 手机号修改－验证手机号是否输入正确
+      function isNum(event){
+          var reg = /\d/; //验证规则
+          if (!reg.test(event.target.value)) {
+            $("#check").replaceWith('<label class="check-wrong" id="check"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></label>');
+            return false;
+          }else{
+            $("#check").replaceWith('<label class="check-ok" id="check"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></label>');
+            return true;
+          };
+      }
+    </script>
 
   </head>
 
@@ -94,81 +109,58 @@
     </div>
     <!-- 标题 -->
     <div class="container">
-      <h2 class="sub-header">库存信息查询</h2>
+      <h2 class="sub-header">申请调货</h2>
+      <br/>
     </div>
-    <!-- 搜索框 -->
-    <div class="container text-center main-search">
-      <form role="search">
-        <div class="row">
-          <div class="col-md-3 col-sm-3">
-            <select class="form-control" name="searchCondition">
-              <option value ="unknown">请选择</option>
-              <option value ="staffId">服装编号</option>
-              <option value ="staffName">服装名称</option>
-            </select>
-          </div>
-          <div class="col-md-8 col-sm-8 search-key-padding">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="关键字" name="searchKey">
+
+    <div class="container addstaff-form" style="width:50%;">
+      <!-- form在这里！ -->
+      <form>
+        <!-- 输入调货分店ID name:shopId -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-2 name-offset col-sm-offset-3">
+              <label class="control-label text-right">调货分店ID：</label>
+            </div>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="shopId" required>
             </div>
           </div>
-          <div class="col-md-1 col-sm-1 search-padding">
-            <button type="submit" class="btn btn-default">搜索</button>
+        </div>
+        <!-- 输入调货产品id name:clothesId -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-2 name-offset col-sm-offset-3">
+              <label class="control-label text-right">调货产品ID：</label>
+            </div>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="clothesId" required>
+            </div>
           </div>
         </div>
+        <!-- 输入调货量 name:amount -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-2 name-offset col-sm-offset-3">
+              <label class="control-label text-right">调货量：</label>
+            </div>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="amount" id="amount" required>
+            </div>
+            <div class="col-sm-2">
+              <label class="check-wrong" id="check"></label>
+            </div>
+          </div>
+        </div>
+        <!-- 提交按钮 -->
+        <div class="text-center">
+          <br/>
+          <button type="submit" class="btn btn-primary submit-btn" onclick="isNum()">提交</button>
+        </div>
+        
       </form>
     </div>
-    <div class="container text-center main-sort">
-          <div class="btn-group" role="group" aria-label="selectStaffBtnGroup">
-            <button type="button" class="btn btn-info" onclick="window.location.href='manager_applypage.html'">调货</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='manager_addstockpage.html'">补货</button>
-          </div>
-       <!--  <div class="col-md-6 text-left">
-          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加服装</button>
-        </div> -->
-    </div>
-    <!-- 信息表格 -->
-    <div class="container table-container">
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr id="table-title">
-              <th>服装编号</th>
-              <th>服装名称</th>
-              <th>单价</th>
-              <th>库存</th>
-              <th>销量</th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-            <!-- TODO: foreach循环 -->
-            <tr>
-              <td>2903JIQ</td>
-              <td>短裤</td>
-              <td>48</td>
-              <td>200</td>
-              <td>290</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- 分页导航 -->
-    <nav class="text-center">
-      <ul class="pagination">
-        <!-- <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li>
-          <a href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li> -->
-      </ul>
-    </nav>
+    
     <footer class="footer">
       <div class="container">
         <hr/>

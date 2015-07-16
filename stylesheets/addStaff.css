@@ -73,6 +73,12 @@ label{
 	margin-top: 2px;
 	margin-left: -20px;
 }
+.check-ok{
+	font-size: 20px;
+	color: green;
+	margin-top: 2px;
+	margin-left: -20px;
+}
 
 .submit-btn{
 	width: 150px;
